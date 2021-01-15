@@ -67,12 +67,10 @@ class ViewController: UIViewController {
     var ramen = UIImageView()
     
     // Clicked snacks
-    var clickedSnacks: [String] = [] {
-        didSet {
-            
-        }
-    }
-    
+    var clickedSnacks: [String] = []
+    let cellId = "SnackCell"
+  
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -118,6 +116,9 @@ class ViewController: UIViewController {
             tv.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor),
             tv.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor)
         ])
+        tv.register(UITableViewCell.self, forCellReuseIdentifier: cellId)
+        tv.dataSource = self
+        tv.delegate = self
         
     }
     
@@ -182,23 +183,10 @@ class ViewController: UIViewController {
     
     @objc func imageTapped(_ sender:ImageTapGesture) {
         print("tapped: \(sender.imageName)")
-//        clickedSnacks.append(sender.imageName)
-//        self.tv .beginUpdates()
-//        self.tv.insertRows(at: [IndexPath.init(row: 0, section: 0)], with: .automatic)
-//        self.tv .endUpdates()
+        clickedSnacks.append(sender.imageName)
+        let indexPath = IndexPath(row: clickedSnacks.count - 1, section: 0)
+        tv.insertRows(at: [indexPath], with: .automatic)
     }
-    
-    
-    // MARK: - Table view data source
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return clickedSnacks.count
-    }
-    
     
     
 }
@@ -243,5 +231,23 @@ extension UIColor {
         }
         
         return nil
+    }
+}
+
+extension ViewController: UITableViewDataSource, UITableViewDelegate {
+
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return clickedSnacks.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
+        cell.textLabel?.text = clickedSnacks[indexPath.row]
+        
+        return cell
     }
 }

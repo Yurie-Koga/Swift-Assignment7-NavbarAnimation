@@ -16,7 +16,6 @@
 		04FDC13225B1A6D300786BFC /* VerticalStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FDC13025B1A6D300786BFC /* VerticalStackView.swift */; };
 		04FDC13325B1A6D300786BFC /* HorizontalStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FDC13125B1A6D300786BFC /* HorizontalStackView.swift */; };
 		04FDC13625B1A6E100786BFC /* UIView+ConstraintLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FDC13525B1A6E100786BFC /* UIView+ConstraintLayout.swift */; };
-		04FDC13A25B2334F00786BFC /* ClickedSnacksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FDC13925B2334F00786BFC /* ClickedSnacksTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +30,6 @@
 		04FDC13025B1A6D300786BFC /* VerticalStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerticalStackView.swift; sourceTree = "<group>"; };
 		04FDC13125B1A6D300786BFC /* HorizontalStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalStackView.swift; sourceTree = "<group>"; };
 		04FDC13525B1A6E100786BFC /* UIView+ConstraintLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+ConstraintLayout.swift"; sourceTree = "<group>"; };
-		04FDC13925B2334F00786BFC /* ClickedSnacksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickedSnacksTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +70,6 @@
 				04FDC12125B1833200786BFC /* Assets.xcassets */,
 				04FDC12325B1833200786BFC /* LaunchScreen.storyboard */,
 				04FDC12625B1833200786BFC /* Info.plist */,
-				04FDC13925B2334F00786BFC /* ClickedSnacksTableViewController.swift */,
 			);
 			path = "Swift-Assignment7-NavbarAnimation";
 			sourceTree = "<group>";
@@ -160,7 +157,6 @@
 				04FDC11D25B1833200786BFC /* ViewController.swift in Sources */,
 				04FDC13225B1A6D300786BFC /* VerticalStackView.swift in Sources */,
 				04FDC11925B1833200786BFC /* AppDelegate.swift in Sources */,
-				04FDC13A25B2334F00786BFC /* ClickedSnacksTableViewController.swift in Sources */,
 				04FDC13625B1A6E100786BFC /* UIView+ConstraintLayout.swift in Sources */,
 				04FDC11B25B1833200786BFC /* SceneDelegate.swift in Sources */,
 				04FDC13325B1A6D300786BFC /* HorizontalStackView.swift in Sources */,
